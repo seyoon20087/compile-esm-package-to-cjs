@@ -22,15 +22,15 @@ const webpackConfig = {
         extractComments: false, // Do not create LICENSE.txt file, such as xxx.js.LICENSE.txt from the output folder
       }),
     ],
-    nodeEnv: false, // Do not remove `process.env.XXX` from the file
+    nodeEnv: false, // Do not remove `process.env.XXX` from the output file
   },
   experiments: {
     topLevelAwait: true, // Bundle top-level await
     outputModule: false, // Do not output as an ES module
   },
   output: {
-    filename: "index.js",
-    libraryTarget: "commonjs2",
+    filename: "index.js", // You can change it to any name if you wish
+    libraryTarget: "commonjs2", // Since we are compiling to CJS this must be set to 'commonjs2'.
   },
 };
 
