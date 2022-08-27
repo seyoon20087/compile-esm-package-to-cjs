@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node build-package.cjs"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "^2.1.3",
+    "webpack": "^5.74.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
