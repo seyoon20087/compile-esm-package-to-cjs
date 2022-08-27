@@ -23,6 +23,7 @@ const webpackConfig = {
       }),
     ],
     nodeEnv: false, // Do not remove `process.env.XXX` from the output file
+    sideEffects: true,
   },
   experiments: {
     topLevelAwait: true, // Bundle top-level await
