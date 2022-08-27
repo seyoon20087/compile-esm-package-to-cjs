@@ -26,7 +26,7 @@ const webpackConfig = {
   },
   experiments: {
     topLevelAwait: true, // Bundle top-level await
-    outputModule: false, // Do not output as a ES module
+    outputModule: false, // Do not output as an ES module
   },
   output: {
     filename: "index.js",
