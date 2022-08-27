@@ -4,6 +4,13 @@ const TerserPlugin = require("terser-webpack-plugin");
 const { merge } = require("webpack-merge");
 
 /**
+ * Output filename
+ * You can change it to any name if you wish
+ */
+
+const outputFilename = "index.js";
+
+/**
  * Webpack config for compiling a package.
  */
 
@@ -30,7 +37,7 @@ const webpackConfig = {
     outputModule: false, // Do not output as an ES module
   },
   output: {
-    filename: "index.js", // You can change it to any name if you wish
+    filename: outputFilename,
     libraryTarget: "commonjs2", // Since we are compiling to CJS this must be set to 'commonjs2'.
   },
 };
@@ -89,6 +96,7 @@ class GeneratePackageJSONPlugin {
             JSON.stringify({
               name: String(this.packageName),
               version: require(`${this.packageName}/package.json`).version,
+              main: outputFilename,
               license:
                 require(`${this.packageName}/package.json`).license ||
                 (
