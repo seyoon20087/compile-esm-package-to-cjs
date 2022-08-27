@@ -104,7 +104,7 @@ class GeneratePackageJSONPlugin {
 }
 
 /**
- * Main function. You should call this respectively when running `node build-package.cjs`.
+ * Main function. You should call this when running `node build-package.cjs`, respectively.
  */
 
 async function main() {
