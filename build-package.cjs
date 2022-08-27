@@ -95,6 +95,7 @@ class GeneratePackageJSONPlugin {
                     .licenses || {}
                 ).type,
               author: require(`${this.packageName}/package.json`).author,
+              type: "commonjs",
             })
           );
         }
